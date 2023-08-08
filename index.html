@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    //random num up to 3
+function num23(){
+    let x= Math.floor(Math.random()*3);
+    return x;
+   
+}
+
+//gets result and compares
+let x = num23()
+
+//choses what num is what
+function choice(){
+if(x==2){
+    return 'rock';
+}else if (x==0){
+    return 'paper';
+}else if (x==1){
+    return'scissors';
+}
+}
+
+let com =choice();
+
+let input = prompt('Rock Paper or Scissors?').toLowerCase();
+
+console.log('You:'+input);
+console.log('Computer:'+choice());
+
+let w = 'You Win!!'
+
+let l = 'You Lose :('
+
+let t = 'tie'
+
+    if ((input=='rock')&&(com=='rock')){
+        console.log(t);
+
+    }else if ((input=='rock') && (com=='paper')){
+        console.log(l);
+
+    }else if ((input=='rock') && (com =='scissors')){
+        console.log(w);
+
+    }else if ((input=='paper')&&(com == 'scissors')){
+        console.log(l);
+
+    }else if ((input=='paper')&&(com=='rock')){
+        console.log(w);
+
+    }else if((input=='scissors')&&(com=='rock')){
+        console.log(l);
+
+    }else if((input=='scissors')&&(com=='paper')){
+        console.log(w);
+
+    }else if ((input=='paper')&&(com == 'paper')){
+        console.log(t);
+    }else if ((input=='scissors')&&(com == 'scissors')){
+        console.log(t);
+    }else{
+        console.log('Input not recognized. Try again?');
+    }
+
+</script>
+
+</body>
+</html>
